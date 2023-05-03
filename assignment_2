@@ -1,0 +1,6 @@
+todolist_id` int(11) NOT NULL;
+task_in_todolist` int(11) NOT NULL;
+PRIMARY KEY (id);
+UNIQUE KEY `step_task_in_todolist` (`todolist_id`,`task_in_todolist`);
+task_in_todolist(task_id int primary Key,task_name,description,is_completed);
+CONSTRAINT `FK1: belong to todolist` FOREIGN KEY (`todolist_id`) REFERENCES `todolists` (`id`);
